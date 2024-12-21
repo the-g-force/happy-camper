@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qxgee4bqovdp"
-path="res://.godot/imported/stomp_boot.png-da9f57912167a151880c793e1e955bb2.ctex"
+path="res://.godot/imported/stomp_boot.png-3518cc7d465b980f38e24db00bbb51f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://weapons/stomp_boot.png"
-dest_files=["res://.godot/imported/stomp_boot.png-da9f57912167a151880c793e1e955bb2.ctex"]
+source_file="res://weapons/stomp/stomp_boot.png"
+dest_files=["res://.godot/imported/stomp_boot.png-3518cc7d465b980f38e24db00bbb51f3.ctex"]
 
 [params]
 
