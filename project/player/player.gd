@@ -1,11 +1,14 @@
 class_name Player
 extends CharacterBody2D
 
+signal died
+
 @export var speed := 100
 
 var health := 10
 
 @onready var _sprite := $AnimatedSprite2D
+
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("left", "right", "up", "down").normalized()
@@ -24,9 +27,8 @@ func _physics_process(delta: float) -> void:
 
 func damage() -> void:
 	health -= 1
-	print(health)
 	if health <= 0:
-		print("you died")
+		died.emit()
 
 
 func is_facing_right() -> bool:

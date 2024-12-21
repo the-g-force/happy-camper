@@ -1,5 +1,7 @@
 extends Node2D
 
+signal game_ended
+
 @export var player : Player
 ## the number of enemies spawned per second
 @export var escalation_curve : Curve
@@ -13,6 +15,8 @@ var _game_time := 0.0
 
 func _process(delta: float) -> void:
 	_game_time += delta
+	if _game_time >= game_length:
+		game_ended.emit()
 
 
 func _spawn_enemy() -> void:
