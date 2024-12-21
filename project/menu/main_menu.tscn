@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dnyp3k2ou5v8i" path="res://enemy/images/fly.png" id="6_0cuyr"]
 [ext_resource type="Texture2D" uid="uid://dxmnn6i5yvfg7" path="res://enemy/images/ant.png" id="7_bnv78"]
 [ext_resource type="Texture2D" uid="uid://ctk0nl2fxjyvq" path="res://menu/waving_guy.png" id="7_wghn3"]
-[ext_resource type="AudioStream" uid="uid://b536amid3j72y" path="res://sound/menu_music.ogg" id="8_b8xhx"]
+[ext_resource type="AudioStream" uid="uid://b536amid3j72y" path="res://menu/menu_music.ogg" id="8_b8xhx"]
 
 [sub_resource type="Gradient" id="Gradient_qushc"]
 offsets = PackedFloat32Array(0, 0.64, 1)
