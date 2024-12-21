@@ -134,9 +134,10 @@ grow_vertical = 2
 script = ExtResource("1_kc27n")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 650.0
 offset_bottom = 371.0
-color = Color(0.6308, 0.83, 0.72708, 1)
+color = Color(0.592, 0.8, 0.598933, 1)
 
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 1

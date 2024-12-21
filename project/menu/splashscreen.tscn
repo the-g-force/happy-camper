@@ -29,7 +29,7 @@ text = "Press any button"
 layout_mode = 0
 offset_right = 650.0
 offset_bottom = 371.0
-color = Color(0.6308, 0.83, 0.72708, 1)
+color = Color(0.592, 0.8, 0.598933, 1)
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
