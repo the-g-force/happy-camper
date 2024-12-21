@@ -2,6 +2,9 @@ class_name Enemy extends CharacterBody2D
 
 signal died
 
+## the names of the files in res://enemy/spriteframes/
+const SPRITEFRAME_NAMES := ["ant", "spider", "bee", "fly"]
+
 @export var target : Player
 @export var speed := 200
 
@@ -45,8 +48,6 @@ func _drop_smore() -> void:
 
 
 func _load_animation() -> void:
-	var file_list := DirAccess.get_files_at("res://enemy/spriteframes/")
-	var file_name := file_list[randi() % file_list.size()]
-	print(file_name)
-	var source : SpriteFrames = load("res://enemy/spriteframes/%s" % [file_name])
+	var file_name : String = SPRITEFRAME_NAMES.pick_random()
+	var source : SpriteFrames = load("res://enemy/spriteframes/%s.tres" % [file_name])
 	_sprite.sprite_frames = source
