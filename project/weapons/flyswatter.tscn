@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://g5rq5pc35xf8"]
 
 [ext_resource type="Script" path="res://weapons/flyswatter.gd" id="1_8wf8l"]
-[ext_resource type="Texture2D" uid="uid://0lj4wt1kkr82" path="res://weapons/FlySwatter.png" id="2_if8lk"]
+[ext_resource type="Texture2D" uid="uid://0lj4wt1kkr82" path="res://weapons/flyswatter.png" id="2_if8lk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ca2u0"]
 size = Vector2(49, 14)
