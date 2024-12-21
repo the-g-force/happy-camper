@@ -1,11 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc0tmssxti2dq"]
+[gd_scene load_steps=4 format=3 uid="uid://cc0tmssxti2dq"]
 
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_5lc0b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x5dkx"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hncgf"]
+radius = 14.0357
+
 [node name="Enemy" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_5lc0b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_x5dkx")
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+shape = SubResource("CircleShape2D_hncgf")
+
+[connection signal="body_entered" from="HitArea" to="." method="_on_hit_area_body_entered"]
