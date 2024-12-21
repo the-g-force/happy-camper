@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnju8tpbpu8sv"]
+
+[ext_resource type="Script" path="res://weapons/rock/rock_projectile.gd" id="1_tiji2"]
+[ext_resource type="Texture2D" uid="uid://savb4wwvr134" path="res://weapons/rock/rock.png" id="1_wuvx4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x3ypp"]
+radius = 5.0
+
+[node name="RockProjectile" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_tiji2")
+
+[node name="Rock" type="Sprite2D" parent="."]
+texture = ExtResource("1_wuvx4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_x3ypp")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
