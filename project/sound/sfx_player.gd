@@ -14,3 +14,7 @@ func play_stomp_sound() -> void:
 ## Play the sound to make when the player gets hit
 func play_hit_sound() -> void:
 	$HitSound.play()
+
+
+func play_whiff_sound() -> void:
+	$WhiffSound.play()
