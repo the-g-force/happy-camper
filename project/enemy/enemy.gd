@@ -14,6 +14,8 @@ func _physics_process(delta: float) -> void:
 func _on_hit_area_body_entered(body: Node2D) -> void:
 	if body is Player:
 		body.damage()
+		queue_free()
+		_drop_smore()
 
 
 ## Apply this much damage to the enemy.
@@ -22,3 +24,13 @@ func damage(amount:int) -> void:
 	_health -= amount
 	if _health <= 0:
 		queue_free()
+		_drop_smore()
+
+
+func _drop_smore() -> void:
+	var smore := preload("res://smore/smore.tscn").instantiate()
+	get_parent().call_deferred("add_child", smore)
+	smore.global_position = global_position
+
+func _draw() -> void:
+	draw_circle(Vector2.ZERO, 16, Color.DEEP_PINK)

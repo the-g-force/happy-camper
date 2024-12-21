@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://do4okoi6jtdj6" path="res://player/player.tscn" id="1_w7vol"]
 [ext_resource type="PackedScene" uid="uid://biitgxtx8s4s3" path="res://level/level.tscn" id="2_qhpsy"]
-[ext_resource type="PackedScene" path="res://enemy/enemy_spawner.tscn" id="3_ba08p"]
+[ext_resource type="PackedScene" uid="uid://btg87pxx0ouyf" path="res://enemy/enemy_spawner.tscn" id="3_ba08p"]
 
 [node name="World" type="Node2D"]
 
