@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cc0tmssxti2dq"]
+[gd_scene load_steps=5 format=3 uid="uid://cc0tmssxti2dq"]
 
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_5lc0b"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5dkx"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_bn82d"]
+radius = 8.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6fn1"]
-size = Vector2(22, 22)
+[sub_resource type="CircleShape2D" id="CircleShape2D_5t7qm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b0oiq"]
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 4
@@ -13,13 +15,16 @@ collision_mask = 2
 script = ExtResource("1_5lc0b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_x5dkx")
+shape = SubResource("CircleShape2D_bn82d")
 
 [node name="HitArea" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
-shape = SubResource("RectangleShape2D_o6fn1")
+shape = SubResource("CircleShape2D_5t7qm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_b0oiq")
 
 [connection signal="body_entered" from="HitArea" to="." method="_on_hit_area_body_entered"]

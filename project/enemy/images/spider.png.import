@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx73n7re0jh5p"
-path="res://.godot/imported/Spider.png-010b6d2c7c59f5c8298db2007f82b559.ctex"
+path="res://.godot/imported/spider.png-1614977eb934f91dba6fa894e2d23f5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemy/images/Spider.png"
-dest_files=["res://.godot/imported/Spider.png-010b6d2c7c59f5c8298db2007f82b559.ctex"]
+source_file="res://enemy/images/spider.png"
+dest_files=["res://.godot/imported/spider.png-1614977eb934f91dba6fa894e2d23f5d.ctex"]
 
 [params]
 
