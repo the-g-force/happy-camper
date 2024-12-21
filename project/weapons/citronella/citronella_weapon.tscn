@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://s5pj8u0o7qi1"]
+
+[ext_resource type="Script" path="res://weapons/citronella/citronella_weapon.gd" id="1_gqy4r"]
+
+[node name="CitronellaWeapon" type="Node2D"]
+script = ExtResource("1_gqy4r")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
