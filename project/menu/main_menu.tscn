@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://menu/main_menu.gd" id="1_kc27n"]
 [ext_resource type="FontFile" uid="uid://cy5b4wn6uutx3" path="res://menu/WoodWorks-Regular.otf" id="2_i5g05"]
 [ext_resource type="Texture2D" uid="uid://difmhpi7lu4bd" path="res://enemy/images/bee.png" id="4_f0xow"]
-[ext_resource type="Texture2D" uid="uid://cx73n7re0jh5p" path="res://enemy/images/Spider.png" id="5_4163w"]
+[ext_resource type="Texture2D" uid="uid://cx73n7re0jh5p" path="res://enemy/images/spider.png" id="5_4163w"]
 [ext_resource type="Texture2D" uid="uid://dnyp3k2ou5v8i" path="res://enemy/images/fly.png" id="6_0cuyr"]
 [ext_resource type="Texture2D" uid="uid://dxmnn6i5yvfg7" path="res://enemy/images/ant.png" id="7_bnv78"]
 [ext_resource type="Texture2D" uid="uid://ctk0nl2fxjyvq" path="res://menu/waving_guy.png" id="7_wghn3"]
@@ -11,7 +11,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_axm2y"]
 font = ExtResource("2_i5g05")
 font_size = 84
-font_color = Color(1, 0.844, 0.22, 1)
+font_color = Color(0.4, 0.235733, 0.092, 1)
 shadow_size = 0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0cpt8"]
@@ -133,6 +133,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kc27n")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 650.0
+offset_bottom = 371.0
+color = Color(0.6308, 0.83, 0.72708, 1)
+
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -149,6 +154,7 @@ grow_vertical = 2
 text = "Play the Game"
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = -2.0
 offset_top = 38.0
 offset_right = 637.0
