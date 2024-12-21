@@ -9,3 +9,8 @@ func play_smore_sound() -> void:
 func play_stomp_sound() -> void:
 	$StompSound.stream = _STOMP_SOUNDS.pick_random()
 	$StompSound.play()
+	
+
+## Play the sound to make when the player gets hit
+func play_hit_sound() -> void:
+	$HitSound.play()

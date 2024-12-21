@@ -32,6 +32,7 @@ func _physics_process(delta: float) -> void:
 
 
 func damage() -> void:
+	sfx.play_hit_sound()
 	health -= 1
 	health_changed.emit(health)
 	if health <= 0:
