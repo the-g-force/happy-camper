@@ -18,6 +18,7 @@ func _on_timer_timeout() -> void:
 
 
 func _swing_shoe() -> void:
+	sfx.play_shoe_sound()
 	var start := randf_range(0,TAU)
 	_arm.rotation = start
 	await create_tween()\

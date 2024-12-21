@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvbhy36ycjysr"]
+[gd_scene load_steps=6 format=3 uid="uid://cvbhy36ycjysr"]
 
 [ext_resource type="Script" path="res://sound/sfx_player.gd" id="1_vy7nq"]
 [ext_resource type="AudioStream" uid="uid://c2b0vcdwnxjbk" path="res://sound/mmmm.wav" id="2_b2ece"]
 [ext_resource type="AudioStream" uid="uid://du0cinod783o5" path="res://sound/ow.wav" id="4_lehpo"]
 [ext_resource type="AudioStream" uid="uid://4hb54t4wtl81" path="res://sound/whiff.wav" id="4_lsjrj"]
+[ext_resource type="AudioStream" uid="uid://dmyowhm5p0l2p" path="res://sound/whiff2.wav" id="5_54kic"]
 
 [node name="SfxPlayer" type="Node"]
 script = ExtResource("1_vy7nq")
@@ -16,5 +17,8 @@ stream = ExtResource("2_b2ece")
 [node name="HitSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_lehpo")
 
-[node name="WhiffSound" type="AudioStreamPlayer" parent="."]
+[node name="FlyswatterSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_lsjrj")
+
+[node name="ShoeSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_54kic")

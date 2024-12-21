@@ -19,9 +19,14 @@ func play_hit_sound() -> void:
 	$HitSound.play()
 
 
-func play_whiff_sound() -> void:
-	_vary($WhiffSound)
-	$WhiffSound.play()
+func play_flyswatter_sound() -> void:
+	_vary($FlyswatterSound)
+	$FlyswatterSound.play()
+
+
+func play_shoe_sound() -> void:
+	_vary($ShoeSound)
+	$ShoeSound.play()
 
 
 func _vary(player : AudioStreamPlayer) -> void:
