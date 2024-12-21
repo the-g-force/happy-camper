@@ -143,16 +143,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kc27n")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 650.0
-offset_bottom = 371.0
-color = Color(0.592, 0.8, 0.598933, 1)
-
-[node name="TextureRect" type="TextureRect" parent="ColorRect"]
-layout_mode = 0
-offset_right = 662.0
-offset_bottom = 370.0
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = SubResource("GradientTexture2D_2w6hg")
 
 [node name="PlayButton" type="Button" parent="."]
@@ -233,20 +230,20 @@ offset_left = 196.0
 offset_top = 219.0
 offset_right = 454.0
 offset_bottom = 320.0
-text = "Made by the G-force
-Music by Mom, Daniel, and Peter
-Coders: Dad and Alex
-Artists: Leo, Daniel and Mom"
+text = "Made by the G-Force
+Music: Mom, Daniel, and Peter
+Programming: Dad and Alex
+Art: Leo, Daniel, and Mom"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="."]
 layout_mode = 0
-offset_left = 254.0
-offset_top = 327.0
-offset_right = 390.0
-offset_bottom = 350.0
-text = "Made in one day. "
+offset_left = 159.0
+offset_top = 337.0
+offset_right = 489.0
+offset_bottom = 386.0
+text = "A One-Day Fam Jam for December 21, 2024"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
