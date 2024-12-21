@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8a8cq8hyiw62"]
+[gd_scene load_steps=7 format=3 uid="uid://c8a8cq8hyiw62"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_mu7b4"]
 [ext_resource type="PackedScene" uid="uid://do4okoi6jtdj6" path="res://player/player.tscn" id="1_w7vol"]
 [ext_resource type="PackedScene" uid="uid://biitgxtx8s4s3" path="res://level/level.tscn" id="2_qhpsy"]
 [ext_resource type="PackedScene" uid="uid://btg87pxx0ouyf" path="res://enemy/enemy_spawner.tscn" id="3_ba08p"]
 [ext_resource type="PackedScene" uid="uid://c4ynybgxdpo0n" path="res://menu/GameOverMenu.tscn" id="5_iby4r"]
+[ext_resource type="AudioStream" uid="uid://ben6xrc1amf88" path="res://sound/bumblebee.ogg" id="6_xfbm6"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_mu7b4")
@@ -13,6 +14,7 @@ script = ExtResource("1_mu7b4")
 
 [node name="Player" parent="." instance=ExtResource("1_w7vol")]
 position = Vector2(320, 196)
+speed = 300
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
@@ -22,6 +24,11 @@ player = NodePath("../Player")
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="GameOverMenu" parent="HUD" instance=ExtResource("5_iby4r")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("6_xfbm6")
+autoplay = true
 
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="game_ended" from="EnemySpawner" to="." method="_on_enemy_spawner_game_ended"]
