@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8a8cq8hyiw62"]
 
 [ext_resource type="PackedScene" uid="uid://do4okoi6jtdj6" path="res://player/player.tscn" id="1_w7vol"]
-[ext_resource type="PackedScene" uid="uid://cc0tmssxti2dq" path="res://enemy/enemy.tscn" id="2_170r2"]
+[ext_resource type="PackedScene" uid="uid://biitgxtx8s4s3" path="res://level/level.tscn" id="2_qhpsy"]
 
-[node name="Node2D" type="Node2D"]
+[node name="World" type="Node2D"]
+
+[node name="Level" parent="." instance=ExtResource("2_qhpsy")]
 
 [node name="Player" parent="." instance=ExtResource("1_w7vol")]
-position = Vector2(67, 102)
+position = Vector2(320, 196)
 
-[node name="Enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_170r2")]
-position = Vector2(344, 88)
-target = NodePath("../Player")
+[node name="Camera2D" type="Camera2D" parent="Player"]

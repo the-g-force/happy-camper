@@ -1,8 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://do4okoi6jtdj6"]
+[gd_scene load_steps=9 format=3 uid="uid://do4okoi6jtdj6"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_tqia1"]
+[ext_resource type="Texture2D" uid="uid://g0cn14hgmo2i" path="res://player/camper.png" id="2_beh3g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_by73u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63spf"]
+atlas = ExtResource("2_beh3g")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxeli"]
+atlas = ExtResource("2_beh3g")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmxmn"]
+atlas = ExtResource("2_beh3g")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8bed"]
+atlas = ExtResource("2_beh3g")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w2aav"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63spf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxeli")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmxmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8bed")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
@@ -11,3 +48,6 @@ script = ExtResource("1_tqia1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_by73u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w2aav")
