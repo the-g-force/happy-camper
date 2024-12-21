@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqks7qudb3v5l"]
+
+[ext_resource type="Script" path="res://weapons/shoe/shoe.gd" id="1_bgsdi"]
+[ext_resource type="Texture2D" uid="uid://cs0bdhkeomdrb" path="res://weapons/shoe/shoe.png" id="1_qpxhw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7tfb7"]
+radius = 10.0499
+
+[node name="Shoe" type="Node2D"]
+script = ExtResource("1_bgsdi")
+
+[node name="Arm" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Arm"]
+position = Vector2(32, 0)
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arm/Area2D"]
+shape = SubResource("CircleShape2D_7tfb7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Arm/Area2D"]
+rotation = -1.5708
+texture = ExtResource("1_qpxhw")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="body_entered" from="Arm/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
