@@ -54,7 +54,7 @@ offset_bottom = 23.0
 grow_horizontal = 0
 text = "Bragging Rights: 0"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("6_xfbm6")
 autoplay = true
