@@ -1,13 +1,20 @@
 extends Node2D
 
+var _player : Player
+
 @onready var _area := $Area2D
 @onready var _collision := $Area2D/CollisionShape2D
 
+
 func _ready() -> void:
 	_deactivate()
+	_player = get_parent()
 	
 
 func _activate() -> void:
+	# Turn the flyswatter the way the player is facing
+	scale.x = 1 if _player.is_facing_right() else -1
+	
 	_area.visible = true
 	_collision.disabled = false
 
