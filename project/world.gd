@@ -28,12 +28,6 @@ func _ready() -> void:
 	_weapon_sequence.shuffle()
 
 
-func _process(_delta: float) -> void:
-	# Debug keys!
-	if Input.is_action_just_pressed("gain_smore"):
-		_player.smores += 1
-
-
 func _select_new_weapon() -> void:
 	get_tree().paused = true
 	var dialog := preload("res://ui/weapon_selection.tscn").instantiate()
