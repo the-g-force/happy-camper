@@ -1,7 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://jm82pmi5pbdb"]
+[gd_scene load_steps=6 format=3 uid="uid://jm82pmi5pbdb"]
 
 [ext_resource type="Script" path="res://menu/splashscreen.gd" id="1_l7nnl"]
 [ext_resource type="FontFile" uid="uid://cy5b4wn6uutx3" path="res://menu/WoodWorks-Regular.otf" id="2_3rqcc"]
+
+[sub_resource type="Gradient" id="Gradient_qushc"]
+offsets = PackedFloat32Array(0, 0.64, 1)
+colors = PackedColorArray(0.592, 0.8, 0.598933, 1, 0.442368, 0.6656, 0.449809, 1, 0.3248, 0.56, 0.33264, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_slc22"]
+gradient = SubResource("Gradient_qushc")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_qhoi7"]
 font = ExtResource("2_3rqcc")
@@ -19,17 +28,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l7nnl")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Press any button"
-
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 650.0
 offset_bottom = 371.0
 color = Color(0.592, 0.8, 0.598933, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+offset_right = 662.0
+offset_bottom = 370.0
+texture = SubResource("GradientTexture2D_slc22")
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
