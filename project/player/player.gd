@@ -2,10 +2,16 @@ class_name Player
 extends CharacterBody2D
 
 signal died
+signal health_changed(new_health: int)
+signal smores_updated(new_smores: int)
 
 @export var speed := 100
 
 var health := 10
+var smores := 0 :
+	set(value):
+		smores = value
+		smores_updated.emit(smores)
 
 @onready var _sprite := $AnimatedSprite2D
 
@@ -27,6 +33,7 @@ func _physics_process(delta: float) -> void:
 
 func damage() -> void:
 	health -= 1
+	health_changed.emit(health)
 	if health <= 0:
 		died.emit()
 

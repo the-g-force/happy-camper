@@ -1,5 +1,7 @@
 class_name Enemy extends CharacterBody2D
 
+signal died
+
 @export var target : Player
 @export var speed := 200
 
@@ -24,6 +26,7 @@ func damage(amount:int) -> void:
 	if _health <= 0:
 		queue_free()
 		_drop_smore()
+		died.emit()
 
 
 func _drop_smore() -> void:

@@ -1,8 +1,8 @@
 extends Area2D
 
 
-func _on_body_entered(_body: Node2D) -> void:
-	print("You ate a smore")
+func _on_body_entered(body: Node2D) -> void:
+	body.smores += 1
 	queue_free()
 
 

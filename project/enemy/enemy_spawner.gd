@@ -1,6 +1,7 @@
 extends Node2D
 
 signal game_ended
+signal enemy_killed
 
 @export var player : Player
 ## the number of enemies spawned per second
@@ -26,6 +27,8 @@ func _spawn_enemy() -> void:
 	add_child(enemy)
 	enemy.target = player
 	enemy.global_position = at
+	
+	enemy.died.connect(func(): enemy_killed.emit())
 
 
 func _on_spawn_timer_timeout() -> void:
