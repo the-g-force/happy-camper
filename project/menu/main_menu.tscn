@@ -162,10 +162,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -56.0
-offset_top = 80.0
-offset_right = 64.0
-offset_bottom = 111.0
+offset_left = -61.0
+offset_top = 4.0
+offset_right = 59.0
+offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Play the Game"
@@ -173,9 +173,9 @@ text = "Play the Game"
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 31.0
+offset_top = 6.0
 offset_right = 640.0
-offset_bottom = 204.0
+offset_bottom = 179.0
 text = "Happy
 Camper"
 label_settings = SubResource("LabelSettings_axm2y")
@@ -191,7 +191,7 @@ autoplay = "default"
 flip_h = true
 
 [node name="Spider" type="AnimatedSprite2D" parent="."]
-position = Vector2(488, 227)
+position = Vector2(506, 225)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_cm25d")
 autoplay = "default"
@@ -226,5 +226,27 @@ autoplay = "default"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_b8xhx")
 autoplay = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 219.0
+offset_right = 454.0
+offset_bottom = 320.0
+text = "Made by the G-force
+Music by Mom, Daniel, and Peter
+Coders: Dad and Alex
+Artists: Leo, Daniel and Mom"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 327.0
+offset_right = 390.0
+offset_bottom = 350.0
+text = "Made in one day. "
+horizontal_alignment = 1
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
