@@ -1,6 +1,128 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccpxkgqjoy7lh"]
+[gd_scene load_steps=24 format=3 uid="uid://ccpxkgqjoy7lh"]
 
 [ext_resource type="Script" path="res://menu/main_menu.gd" id="1_kc27n"]
+[ext_resource type="FontFile" uid="uid://cy5b4wn6uutx3" path="res://menu/WoodWorks-Regular.otf" id="2_i5g05"]
+[ext_resource type="Texture2D" uid="uid://difmhpi7lu4bd" path="res://enemy/images/bee.png" id="4_f0xow"]
+[ext_resource type="Texture2D" uid="uid://cx73n7re0jh5p" path="res://enemy/images/Spider.png" id="5_4163w"]
+[ext_resource type="Texture2D" uid="uid://dnyp3k2ou5v8i" path="res://enemy/images/fly.png" id="6_0cuyr"]
+[ext_resource type="Texture2D" uid="uid://dxmnn6i5yvfg7" path="res://enemy/images/ant.png" id="7_bnv78"]
+[ext_resource type="Texture2D" uid="uid://ctk0nl2fxjyvq" path="res://menu/waving_guy.png" id="7_wghn3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_axm2y"]
+font = ExtResource("2_i5g05")
+font_size = 84
+font_color = Color(1, 0.844, 0.22, 1)
+shadow_size = 0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cpt8"]
+atlas = ExtResource("4_f0xow")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hr16"]
+atlas = ExtResource("4_f0xow")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_20tou"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0cpt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hr16")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g346n"]
+atlas = ExtResource("5_4163w")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljqr6"]
+atlas = ExtResource("5_4163w")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cm25d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g346n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljqr6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6aykm"]
+atlas = ExtResource("6_0cuyr")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0g3h"]
+atlas = ExtResource("6_0cuyr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x3kko"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6aykm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0g3h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp0sh"]
+atlas = ExtResource("7_bnv78")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twlsp"]
+atlas = ExtResource("7_bnv78")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vr1hu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp0sh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twlsp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k363r"]
+atlas = ExtResource("7_wghn3")
+region = Rect2(512, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gta2"]
+atlas = ExtResource("7_wghn3")
+region = Rect2(0, 768, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7xqxa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k363r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gta2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -18,12 +140,64 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_left = -56.0
+offset_top = 80.0
+offset_right = 64.0
+offset_bottom = 111.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Play the Game"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -2.0
+offset_top = 38.0
+offset_right = 637.0
+offset_bottom = 211.0
+text = "Happy
+Camper"
+label_settings = SubResource("LabelSettings_axm2y")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Bee" type="AnimatedSprite2D" parent="."]
+position = Vector2(505, 56)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_20tou")
+autoplay = "default"
+flip_h = true
+
+[node name="Spider" type="AnimatedSprite2D" parent="."]
+position = Vector2(488, 227)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_cm25d")
+autoplay = "default"
+flip_h = true
+
+[node name="Fly" type="AnimatedSprite2D" parent="."]
+position = Vector2(579, 128)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_x3kko")
+autoplay = "default"
+flip_h = true
+
+[node name="Ant" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 321)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_vr1hu")
+autoplay = "default"
+flip_h = true
+
+[node name="Fly2" type="AnimatedSprite2D" parent="."]
+position = Vector2(143, 129)
+scale = Vector2(2.625, 2.625)
+sprite_frames = SubResource("SpriteFrames_x3kko")
+autoplay = "default"
+flip_h = true
+
+[node name="guy" type="AnimatedSprite2D" parent="."]
+position = Vector2(68, 208)
+sprite_frames = SubResource("SpriteFrames_7xqxa")
+autoplay = "default"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
