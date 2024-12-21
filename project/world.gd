@@ -16,10 +16,11 @@ var _upgrade_smore_thresholds := [10,30]
 var _weapon_sequence : Array[WeaponType]= []
 
 @onready var _player := $Player
-@onready var _game_over_menu : Control = $HUD/GameOverMenu
-@onready var _health_bar : ProgressBar = $HUD/HealthBar
-@onready var _smore_label : Label = $HUD/SmoresLabel
-@onready var _kill_label : Label = $HUD/PointLabel
+@onready var _game_over_menu : Control = $HUD/Control/GameOverMenu
+@onready var _health_bar : ProgressBar = $HUD/Control/HealthBar
+@onready var _smore_label : Label = $HUD/Control/SmoresLabel
+@onready var _kill_label : Label = $HUD/Control/PointLabel
+
 
 func _ready() -> void:
 	# Randomize the sequence of weapons that are available.

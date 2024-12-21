@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://ccpxkgqjoy7lh"]
+[gd_scene load_steps=29 format=3 uid="uid://ccpxkgqjoy7lh"]
 
+[ext_resource type="Theme" uid="uid://cowie0qkntvju" path="res://theme.tres" id="1_1785a"]
 [ext_resource type="Script" path="res://menu/main_menu.gd" id="1_kc27n"]
 [ext_resource type="FontFile" uid="uid://cy5b4wn6uutx3" path="res://menu/WoodWorks-Regular.otf" id="2_i5g05"]
 [ext_resource type="Texture2D" uid="uid://difmhpi7lu4bd" path="res://enemy/images/bee.png" id="4_f0xow"]
@@ -134,6 +135,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_diaqq"]
+font_color = Color(0.1702, 0.23, 0.172193, 1)
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -141,6 +145,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_1785a")
 script = ExtResource("1_kc27n")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -225,25 +230,37 @@ stream = ExtResource("8_b8xhx")
 autoplay = true
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 196.0
-offset_top = 219.0
-offset_right = 454.0
-offset_bottom = 320.0
-text = "Made by the G-Force
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 49.5
+offset_bottom = 138.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Made by the G-force
 Music: Mom, Daniel, and Peter
 Programming: Dad and Alex
 Art: Leo, Daniel, and Mom"
+label_settings = SubResource("LabelSettings_diaqq")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="."]
-layout_mode = 0
-offset_left = 159.0
-offset_top = 337.0
-offset_right = 489.0
-offset_bottom = 386.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -23.0
+offset_right = 124.0
+grow_horizontal = 2
+grow_vertical = 0
 text = "A One-Day Fam Jam for December 21, 2024"
+label_settings = SubResource("LabelSettings_diaqq")
 horizontal_alignment = 1
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

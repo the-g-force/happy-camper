@@ -35,6 +35,7 @@ offset_bottom = 371.0
 color = Color(0.592, 0.8, 0.598933, 1)
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
 offset_right = 662.0
 offset_bottom = 370.0
 texture = SubResource("GradientTexture2D_slc22")

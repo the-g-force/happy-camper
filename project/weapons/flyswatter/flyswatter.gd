@@ -17,7 +17,7 @@ func _activate() -> void:
 	
 	_area.visible = true
 	_collision.disabled = false
-	sfx.play_whiff_sound()
+	sfx.play_flyswatter_sound()
 
 
 func _deactivate() -> void:
