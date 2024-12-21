@@ -25,6 +25,7 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_5t7qm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_b0oiq")
 
 [connection signal="body_entered" from="HitArea" to="." method="_on_hit_area_body_entered"]

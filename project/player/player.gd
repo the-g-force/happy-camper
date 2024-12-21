@@ -7,7 +7,7 @@ signal smores_updated(new_smores: int)
 
 @export var speed := 100
 
-var health := 10
+var health := 30
 var smores := 0 :
 	set(value):
 		smores = value

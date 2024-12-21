@@ -6,7 +6,7 @@ signal died
 const SPRITEFRAME_NAMES := ["ant", "spider", "bee", "fly"]
 
 @export var target : Player
-@export var speed := 200
+@export var speed := 20
 
 var _health := 1.0
 
@@ -16,6 +16,7 @@ var _health := 1.0
 func _ready() -> void:
 	_load_animation()
 	_sprite.play("default")
+#	get_tree().create_tween().tween_property(self, "speed", 40, 10.0)
 
 
 func _physics_process(delta: float) -> void:

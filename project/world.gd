@@ -12,7 +12,7 @@ const WEAPONS : Array[WeaponType] = [
 ]
 
 var _enemies_killed := 0
-var _upgrade_smore_thresholds := [5,10]
+var _upgrade_smore_thresholds := [10,30]
 var _weapon_sequence : Array[WeaponType]= []
 
 @onready var _player := $Player

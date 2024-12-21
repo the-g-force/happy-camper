@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" path="res://enemy/enemy_spawner.gd" id="1_vj3vg"]
 
-[sub_resource type="Curve" id="Curve_du5ti"]
-max_value = 20.0
-_data = [Vector2(0, 0.65934), 0.0, 0.0, 0, 0, Vector2(0.105263, 1.0989), 1.6405, 1.6405, 0, 0, Vector2(0.178947, 6.15384), 0.0, 0.0, 0, 0, Vector2(0.310526, 3.07692), 0.0, 0.0, 0, 0, Vector2(0.342105, 11.6484), 4.09231, 4.09231, 0, 0, Vector2(0.521053, 5.4945), 0.0, 0.0, 0, 0, Vector2(0.621053, 16.044), 52.4961, 52.4961, 0, 0, Vector2(0.836842, 20), 0.0, 0.0, 0, 0, Vector2(1, 1.97802), 0.0, 0.0, 0, 0]
-point_count = 9
+[sub_resource type="Curve" id="Curve_m6nac"]
+_data = [Vector2(0, 0.153846), 0.0, 0.0, 0, 0, Vector2(0.168421, 0.153846), 0.0, 0.0, 0, 0, Vector2(0.378947, 0.340659), -5.31468, -5.31468, 0, 0, Vector2(0.610526, 0.626374), -6.68132, -6.68132, 0, 0, Vector2(0.768421, 1), 0.0, 0.0, 0, 0, Vector2(0.842105, 0.56044), -3.41026, -3.41026, 0, 0, Vector2(1, 0.175824), 0.0, 0.0, 0, 0]
+point_count = 7
 
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_vj3vg")
-escalation_curve = SubResource("Curve_du5ti")
+escalation_curve = SubResource("Curve_m6nac")
+enemy_spawn_scale = 20.0
 
 [node name="SpawnTimer" type="Timer" parent="."]
 one_shot = true

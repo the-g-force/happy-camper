@@ -15,7 +15,6 @@ script = ExtResource("1_mu7b4")
 
 [node name="Player" parent="." instance=ExtResource("1_w7vol")]
 position = Vector2(320, 196)
-speed = 300
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
@@ -36,9 +35,9 @@ anchor_bottom = 1.0
 offset_top = -27.0
 grow_horizontal = 2
 grow_vertical = 0
-max_value = 10.0
+max_value = 30.0
 step = 1.0
-value = 10.0
+value = 30.0
 show_percentage = false
 
 [node name="SmoresLabel" type="Label" parent="HUD"]

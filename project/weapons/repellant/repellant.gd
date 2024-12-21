@@ -2,7 +2,7 @@ extends Node2D
 
 ## Radians per second
 @export var rotation_speed := 0.7
-@export var wait_seconds := 1
+@export var wait_seconds := 0.5
 
 @onready var _area := $Area2D
 
