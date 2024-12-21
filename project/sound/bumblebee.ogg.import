@@ -2,7 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://ben6xrc1amf88"
+uid="uid://dt0n4f5xkayy0"
 path="res://.godot/imported/bumblebee.ogg-96a9b5d4cafabfce4e8573a3d5b77339.oggvorbisstr"
 
 [deps]
@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/bumblebee.ogg-96a9b5d4cafabfce4e8573a3d5b7733
 
 [params]
 
-loop=true
-loop_offset=0.0
-bpm=0.0
+loop=false
+loop_offset=0
+bpm=0
 beat_count=0
 bar_beats=4

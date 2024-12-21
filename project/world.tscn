@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://btg87pxx0ouyf" path="res://enemy/enemy_spawner.tscn" id="3_ba08p"]
 [ext_resource type="PackedScene" uid="uid://g5rq5pc35xf8" path="res://weapons/flyswatter/flyswatter.tscn" id="4_wlrs4"]
 [ext_resource type="PackedScene" uid="uid://c4ynybgxdpo0n" path="res://menu/GameOverMenu.tscn" id="5_iby4r"]
-[ext_resource type="AudioStream" uid="uid://ben6xrc1amf88" path="res://sound/bumblebee.ogg" id="6_xfbm6"]
+[ext_resource type="AudioStream" uid="uid://dt0n4f5xkayy0" path="res://sound/bumblebee.ogg" id="6_xfbm6"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_mu7b4")
