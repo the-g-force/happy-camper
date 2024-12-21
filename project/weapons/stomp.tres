@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponType" load_steps=3 format=3 uid="uid://ctrxhfxmud802"]
+
+[ext_resource type="PackedScene" uid="uid://dd12of8hwd36m" path="res://weapons/stomp/stomp_weapon.tscn" id="1_ybi4t"]
+[ext_resource type="Script" path="res://weapons/weapon_type.gd" id="2_rav4i"]
+
+[resource]
+script = ExtResource("2_rav4i")
+name = "Stomp"
+description = "Bring a big boot down randomly around the screen"
+scene = ExtResource("1_ybi4t")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponType" load_steps=3 format=3 uid="uid://fluapjwwrrqq"]
+
+[ext_resource type="PackedScene" uid="uid://s5pj8u0o7qi1" path="res://weapons/citronella/citronella_weapon.tscn" id="1_83au5"]
+[ext_resource type="Script" path="res://weapons/weapon_type.gd" id="2_5h8mw"]
+
+[resource]
+script = ExtResource("2_5h8mw")
+name = "Citronella Bomb"
+description = "Throws a grenade that blasts insects in explosive range"
+scene = ExtResource("1_83au5")

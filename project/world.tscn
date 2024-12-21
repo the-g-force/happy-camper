@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8a8cq8hyiw62"]
+[gd_scene load_steps=8 format=3 uid="uid://c8a8cq8hyiw62"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_mu7b4"]
 [ext_resource type="PackedScene" uid="uid://do4okoi6jtdj6" path="res://player/player.tscn" id="1_w7vol"]
 [ext_resource type="PackedScene" uid="uid://biitgxtx8s4s3" path="res://level/level.tscn" id="2_qhpsy"]
 [ext_resource type="PackedScene" uid="uid://btg87pxx0ouyf" path="res://enemy/enemy_spawner.tscn" id="3_ba08p"]
+[ext_resource type="PackedScene" uid="uid://g5rq5pc35xf8" path="res://weapons/flyswatter/flyswatter.tscn" id="4_wlrs4"]
 [ext_resource type="PackedScene" uid="uid://c4ynybgxdpo0n" path="res://menu/GameOverMenu.tscn" id="5_iby4r"]
 [ext_resource type="AudioStream" uid="uid://ben6xrc1amf88" path="res://sound/bumblebee.ogg" id="6_xfbm6"]
 
@@ -17,6 +18,8 @@ position = Vector2(320, 196)
 speed = 300
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Flyswatter" parent="Player" instance=ExtResource("4_wlrs4")]
 
 [node name="EnemySpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_ba08p")]
 player = NodePath("../Player")

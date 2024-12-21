@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponType" load_steps=3 format=3 uid="uid://dowrw3v2bxupn"]
+
+[ext_resource type="PackedScene" uid="uid://bqks7qudb3v5l" path="res://weapons/shoe/shoe.tscn" id="1_cydte"]
+[ext_resource type="Script" path="res://weapons/weapon_type.gd" id="2_r7rfl"]
+
+[resource]
+script = ExtResource("2_r7rfl")
+name = "Shoe"
+description = "Swing a shoe at nearby insects"
+scene = ExtResource("1_cydte")

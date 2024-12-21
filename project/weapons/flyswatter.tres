@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="WeaponType" load_steps=3 format=3 uid="uid://c6fs25ja4tjp6"]
+
+[ext_resource type="PackedScene" uid="uid://g5rq5pc35xf8" path="res://weapons/flyswatter/flyswatter.tscn" id="1_s2opm"]
+[ext_resource type="Script" path="res://weapons/weapon_type.gd" id="1_tib1a"]
+
+[resource]
+script = ExtResource("1_tib1a")
+name = "Flyswatter"
+scene = ExtResource("1_s2opm")

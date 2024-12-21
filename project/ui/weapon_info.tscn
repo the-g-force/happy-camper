@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://coct6x5yr5gvy"]
+
+[ext_resource type="Script" path="res://ui/weapon_info.gd" id="1_ipwom"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5kwl7"]
+font_size = 24
+font_color = Color(0.0687983, 0.0687983, 0.0687983, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1y57h"]
+font_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+
+[node name="WeaponInfo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ipwom")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Name"
+label_settings = SubResource("LabelSettings_5kwl7")
+horizontal_alignment = 1
+
+[node name="InfoLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Description"
+label_settings = SubResource("LabelSettings_1y57h")
+autowrap_mode = 3

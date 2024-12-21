@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponType" load_steps=3 format=3 uid="uid://bvciv43rbpwpr"]
+
+[ext_resource type="PackedScene" uid="uid://c60wgkqsnomy3" path="res://weapons/repellant/repellant.tscn" id="1_aqlup"]
+[ext_resource type="Script" path="res://weapons/weapon_type.gd" id="2_8gvs2"]
+
+[resource]
+script = ExtResource("2_8gvs2")
+name = "Repellant Spray"
+description = "Spritz the air around you with the lovely smell of insecticide"
+scene = ExtResource("1_aqlup")

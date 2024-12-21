@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponType" load_steps=3 format=3 uid="uid://bpqehn7e2r146"]
+
+[ext_resource type="PackedScene" uid="uid://4s343dbcr7w" path="res://weapons/rock/rock_weapon.tscn" id="1_i03qn"]
+[ext_resource type="Script" path="res://weapons/weapon_type.gd" id="2_wym2t"]
+
+[resource]
+script = ExtResource("2_wym2t")
+name = "Rocks"
+description = "Throw rocks in cardinal directions"
+scene = ExtResource("1_i03qn")
